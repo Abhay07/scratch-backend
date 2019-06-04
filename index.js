@@ -11,7 +11,7 @@ http.createServer(function(req, res) {
 	}
 	console.log('request recieved');
     proxy.web(req, res, { target: 'https://api.scratch.mit.edu', secure:true,changeOrigin:true });
-}).listen(3000);
+}).listen(8080);
 var enableCors = function(req, res) {
 	if (req.headers['access-control-request-method']) {
 		res.setHeader('access-control-allow-methods', req.headers['access-control-request-method']);
