@@ -9,6 +9,7 @@ http.createServer(function(req, res) {
 		res.end();
 		return;
 	}
+	console.log('request recieved');
     proxy.web(req, res, { target: 'https://api.scratch.mit.edu', secure:true,changeOrigin:true });
 }).listen(3000);
 var enableCors = function(req, res) {
